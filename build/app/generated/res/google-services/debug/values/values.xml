@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">63067007466-8m0ccgc3tqvetdt8fbl4cj1gr2c1ldts.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://chat-real-time-961be.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">63067007466</string>
+    <string name="google_api_key" translatable="false">AIzaSyD1QRXQ0UNH8rfegNoNRha4H2QtYXD3MO8</string>
+    <string name="google_app_id" translatable="false">1:63067007466:android:909beee33b1311ea696a93</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyD1QRXQ0UNH8rfegNoNRha4H2QtYXD3MO8</string>
+    <string name="google_storage_bucket" translatable="false">chat-real-time-961be.appspot.com</string>
+    <string name="project_id" translatable="false">chat-real-time-961be</string>
+</resources>
