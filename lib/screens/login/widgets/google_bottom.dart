@@ -45,7 +45,7 @@ class _GoogleBottomState extends State<GoogleBottom> {
           Future.delayed(Duration(seconds: 0)).then((_) {
             Navigator.of(context)
           .pushReplacement(MaterialPageRoute(builder: (context) => HomeScreen(user: user,)));
-    });
+          });
         });
       },
       child: Container(
