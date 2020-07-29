@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     if(imgFile != null) {
       StorageUploadTask task = FirebaseStorage.instance.ref().child(
-        DateTime.now().millisecondsSinceEpoch.toString()
+        widget.user.uid + DateTime.now().millisecondsSinceEpoch.toString()
       ).putFile(imgFile);
 
       setState(() {
