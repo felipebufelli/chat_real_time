@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
           .pushReplacement(MaterialPageRoute(builder: (context) => LoginScreen()));
     });
   }
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
