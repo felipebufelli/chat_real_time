@@ -35,8 +35,11 @@ class _TextComposerState extends State<TextComposer> {
             onPressed: () async{
               // ignore: deprecated_member_use
               final File imgFile = await ImagePicker.pickImage(source: ImageSource.camera);
-              if (imgFile == null) return
-              widget.sendMessage(imgFile: imgFile);
+              if (imgFile == null) {
+                return;
+              } else {
+                widget.sendMessage(imgFile: imgFile);
+              }
             }
           ),
           Expanded(
