@@ -1,20 +1,30 @@
 import 'dart:io';
 
+import 'package:chat_real_time/screens/home/widgets/chat_message.dart';
 import 'package:chat_real_time/screens/home/widgets/text_composer.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
+
+  HomeScreen({this.user});
+
+  final FirebaseUser user;
+
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
   void _sendMessage({String text, File imgFile}) async {
 
-    Map<String, dynamic> data = {};
+    Map<String, dynamic> data = {
+      'uid': widget.user.uid,
+      'senderName': widget.user.displayName,
+      'senderPhotoUrl': widget.user.photoUrl
+    };
 
     if(imgFile != null) {
       StorageUploadTask task = FirebaseStorage.instance.ref().child(
@@ -62,9 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       itemCount: documents.length,
                       reverse: true, //mensagens de baixo para cima
                       itemBuilder: (context, index) {
-                        return ListTile(
-                          title: Text(documents[index].data['text']),
-                        );
+                        return ChatMessage(data: documents[index].data);
                       }
                     );
                 }

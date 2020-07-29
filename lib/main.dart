@@ -1,5 +1,4 @@
 import 'package:chat_real_time/colors.dart';
-import 'package:chat_real_time/screens/home/home.dart';
 import 'package:chat_real_time/screens/splash.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +18,7 @@ class MyApp extends StatelessWidget {
           color: pinkDark,
         )
       ),
-      home: HomeScreen()
+      home: SplashScreen()
     );
   }
 }
