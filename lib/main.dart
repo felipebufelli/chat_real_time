@@ -1,3 +1,4 @@
+import 'package:chat_real_time/colors.dart';
 import 'package:chat_real_time/screens/splash.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Chat Real Time',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: pinkDark,
+        iconTheme: IconThemeData(
+          color: pinkDark,
+        )
+      ),
       home: SplashScreen()
     );
   }
